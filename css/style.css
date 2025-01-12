@@ -1,0 +1,172 @@
+/* general (desktop First)*/
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* .debug {
+  border: 1px solid red;
+} */
+
+/* settings body */
+body {
+  font-family: "Edu TAS Beginner", cursive;
+  background-image: url("../img/cork.png");
+}
+
+/* utilities flex */
+.d-flex {
+  display: flex;
+
+}
+
+.d-wrap {
+  flex-wrap: wrap;
+}
+
+.d-none {
+  display: none !important;
+}
+
+/* text settings */
+header h1 {
+  font-size: 6em;
+  text-align: center;
+  background-image: url("../img/wall.png");
+  padding: 20px;
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+/* Main settings */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+main {
+  padding: 60px;
+}
+
+/* Cards (row) settings */
+.row {
+  min-width: 200px;
+  flex-basis: calc(30% - 20px);
+  flex-grow: 1;
+  flex-shrink: 0;
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 1px 3px 8px 5px rgba(0, 0, 0, 0.5);
+  margin: 40px 10px;
+  transition: all 0.5s;
+}
+
+.row:hover {
+  transform: rotate(10deg) scale(1.1);
+  box-shadow: 10px 10px 20px 20px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.row:hover #pin {
+  display: none;
+}
+
+#pin {
+  position: absolute;
+  top: -20px;
+  left: 45%;
+}
+
+.col img {
+  width: 100%;
+}
+
+/* Images Overlay settings */
+#overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.50);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#overlay-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#img-overlay {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: cover;
+}
+
+#close-overlay {
+  margin-bottom: 50px;
+  width: 80px;
+  height: 40px;
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+/* loader overlay settings */
+
+#loader {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.50);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.fa-solid {
+  font-size: 3rem;
+  color: darkgrey;
+}
+
+/* media queries */
+
+@media screen and (max-width: 900px) {
+  .row {
+      flex-basis: calc(50% - 20px);
+      max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .row {
+      min-width: 400px;
+  }
+}
